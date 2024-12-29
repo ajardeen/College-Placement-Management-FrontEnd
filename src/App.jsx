@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import StudentPage from "./pages/StudentPage";
-import HomePage from "./pages/Homepage";
+import HomePage from "./pages/HomePage";
 import AdminPage from "./pages/AdminPage";
 import NotFound from "./errors/NotFound";
 import CompanyPage from "./pages/CompanyPage";
