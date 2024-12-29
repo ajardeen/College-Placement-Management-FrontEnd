@@ -5,7 +5,7 @@ import Applications from "../components/Students/Applications";
 import JobListings from "../components/Students/JobListings";
 import { Routes, Route } from "react-router-dom";
 import JobApply from "../components/Students/JobApply";
-import Navbar from "../components/NavBar";
+import Navbar from "../components/Navbar";
 import PlacementDriveRegistration from "../components/PlacementDriveRegistration";
 import PlacementDriveList from "../components/PlacementDriveList";
 import StudentApplicationDetails from "../components/Students/StudentApplicationDetails";
