@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import StudentPage from "./pages/StudentPage";
-import Homepage from "./pages/Homepage";
+import HomePage from "./pages/Homepage";
 import AdminPage from "./pages/AdminPage";
 import NotFound from "./errors/NotFound";
 import CompanyPage from "./pages/CompanyPage";
@@ -17,7 +17,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/home/*" element={<Homepage />} />
+          <Route path="/home/*" element={<HomePage />} />
           <Route element={<ProtectedRoutes />}>
           {role === "Students" ? (
             <Route path="/student/*" element={<StudentPage />} />
