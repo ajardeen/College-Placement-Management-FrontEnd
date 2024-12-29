@@ -34,7 +34,7 @@ const LoginPage = () => {
     try {
       await API.post("/login", formData)
         .then((res) => {
-          toast.success("Login successful");
+         
           console.log("Login response:", res.data);
           login(res.data.token, res.data.role);
           localStorage.setItem(
@@ -50,9 +50,11 @@ const LoginPage = () => {
           );
           setTimeout(() => {
             if(role==="Admins"){
+              toast.success("Successful login as ADMIN");
               navigate("/admin/");
             }
-            else if (role==="Students"){
+            if (role==="Students"){
+              toast.success("Successful login as STUDENT");
               navigate("/student/");
             }
           }, 500);
@@ -121,20 +123,38 @@ const LoginPage = () => {
             >
               Forgot Password ?
             </motion.span>
-            <motion.button
-            type="submit"
-              whileHover={{ scale: 1.05 }}
-              onClick={()=>{
-                setFormData({
-                  email: "azardevacc@gmail.com",
-                  password: "123",
-                });
-              }}
-              className="text-sm ml-2 hover:text-blue-500 cursor-pointer"
-            >
-              ADMIN AUTO FILL
-            </motion.button>
+            <p className="text-sm opacity-50 mt-4">Click to copy admin</p>
+              <div className="flex items-center justify-between ">
+                
+              <div className=" text-sm">
+                <span className="text-gray-700">Email:
+                <span
+                  className="text-indigo-600 cursor-pointer hover:text-indigo-700"
+                  onClick={() => {
+                    navigator.clipboard.writeText("azardevacc@gmail.com");
+                    toast.success("Email copied to clipboard");
+                  }}
+                >
+                  azardevacc@gmail.com
+                </span>
+                </span>
+              </div>
+              <div className=" text-sm">
+                <span className="text-gray-700">Pass:
+                <span
+                  className="text-indigo-600 cursor-pointer hover:text-indigo-700"
+                  onClick={() => {
+                    navigator.clipboard.writeText("123");
+                    toast.success("Password copied to clipboard");
+                  }}
+                >
+                  123
+                </span>
+                </span>
+              </div>
+              </div>
           </motion.form>
+          <hr className="mb-5"/>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

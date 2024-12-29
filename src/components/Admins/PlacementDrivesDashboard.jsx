@@ -87,7 +87,7 @@ function PlacementDrivesDashboard() {
                     <div className="text-sm text-green-700">Offers</div>
                   </div>
                 </div>
-                <button
+                {/* <button
                   className="mt-6 w-full inline-flex justify-center items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200"
                   onClick={() => console.log(`View details for ${drive.id}`)}
                 >
@@ -95,7 +95,7 @@ function PlacementDrivesDashboard() {
                   <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </button>
+                </button> */}
               </div>
             </div>
           ))}
