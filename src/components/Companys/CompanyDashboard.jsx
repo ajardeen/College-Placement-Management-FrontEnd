@@ -6,7 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import InterviewScheduler from "./InterviewScheduler";
 import { useMemo } from "react";
 import CompanySideBar from "../Companys/CompanySideBar";
-import Navbar from "../NavBar";
+import Navbar from "../Navbar";
 import PlacementDriveRegistration from "../PlacementDriveRegistration";
 import PlacementDriveList from "../PlacementDriveList";
 import ScheduleMeetingForm from "./ScheduleMeetingForm";

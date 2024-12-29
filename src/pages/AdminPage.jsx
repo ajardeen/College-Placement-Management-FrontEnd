@@ -7,7 +7,7 @@ import AdminSideBar from "../components/Admins/AdminSideBar";
 import RecruitmentDashboard from "../components/Admins/RecruitmentDashboard";
 import AcademicRecords from "../components/Admins/AcademicRecords";
 import CompanyList from "../components/Admins/CompanyLists";
-import NavBar from "../components/NavBar";
+import Navbar from "../components/Navbar";
 import AddAcademicRecord from "../components/Admins/AddAcademicRecord";
 import InterviewList from "../components/Admins/InterviewList";
 import API from "../api/axios";
@@ -60,7 +60,7 @@ function AdminPage() {
           transition={{ duration: 0.5 }}
           className="flex flex-col w-full order-1"
         >
-          <NavBar />
+          <Navbar />
           <div className="h-[90vh] overflow-y-auto backdrop-blur-sm bg-white/30 rounded-lg m-4 p-4 shadow-lg">
             <Routes>
               <Route path="/" element={<PlacementDrivesDashboard />} />
