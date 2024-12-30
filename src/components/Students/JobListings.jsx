@@ -15,14 +15,14 @@ const JobListings = () => {
     const userData = JSON.parse(localStorage.getItem("userData"));
     return userData ? userData.email : "";
   }, []);
-  console.log(email);
+
 
   useEffect(() => {
     const fetchJobs = async () => {
       try {
         await API.post("/student/get-all-jobs", { email })
           .then((response) => {
-            console.log(response.data.jobData);
+           
             setTimeout(() => {
               setJobs(response.data.jobData);
               setLoading(false);
