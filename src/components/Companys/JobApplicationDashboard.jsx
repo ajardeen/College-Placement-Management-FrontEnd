@@ -19,7 +19,7 @@ const JobApplicationDashboard = () => {
     const fetchAllAppliedStudents = async () => {
       try {
         const response = await API.post(`/company/getStudentsDataById`, { studentIds });
-
+        console.log("student data", response.data);
       } catch (error) {
         console.error("Error fetching applications:", error);
       }
@@ -31,7 +31,7 @@ const JobApplicationDashboard = () => {
     const fetchApplications = async () => {
       try {
         const response = await API.get(`/company/get-all-jobs/${companyId}`);
-      
+        console.log(response.data);
         setApplications(response.data);
         setStudentIds(response.data.map((application) => application.studentId));
       } catch (error) {

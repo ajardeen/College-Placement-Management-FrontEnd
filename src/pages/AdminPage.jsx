@@ -19,7 +19,7 @@ function AdminPage() {
     try {
       const response = await API.get("/admin/get-all-interviews");
       setInterviews(response.data);
-    
+      console.log(response.data);
     }
     catch (error) {
       console.error("Error fetching interviews:", error);

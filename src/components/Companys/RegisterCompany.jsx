@@ -216,7 +216,7 @@ const LoginCompany = () => {
     try {
       await API.post("/company/login", { email, password })
         .then((response) => {
-        
+          console.log("Login successful:", response.data);
           login(response.data.token, response.data.role);
           localStorage.setItem(
             "companyData",

@@ -14,7 +14,7 @@ function PlacementDriveList() {
           try {
               await API.get((role === "Companys" ? "/company" : "/student") + "/drives")
                   .then((response) => {
-                    
+                      console.log(response.data);
                       setDrives(response.data);
                   })
                   .catch((error) => {

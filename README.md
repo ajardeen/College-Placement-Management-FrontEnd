@@ -4,6 +4,30 @@ A comprehensive system designed to streamline the college placement process. Thi
 
 ---
 
+## Demo Login Credentials
+
+### Admin
+
+USER: azardevacc@gmail.com  
+ PASS: 123
+
+### Company
+
+USER: microsoft@outlook.com 
+ PASS: 123
+
+### Student
+
+USER: 3rdmysteryunknown@gmail.com  
+ PASS: 123
+
+### Zoom API
+
+USER: <use your zoom marketplace email> 
+ PASS: <use your zoom marketplace password>
+
+login using this account and test payment
+
 ## Features
 
 ### 1. **Student and Application Management**
@@ -83,6 +107,7 @@ A comprehensive system designed to streamline the college placement process. Thi
    ```bash
    git clone https://github.com/ajardeen/College-Placement-Management-FrontEnd
    cd College-Placement-Management-FrontEnd
+   ```
 
 ### Install Backend Dependencies:
 
@@ -108,6 +133,7 @@ SMTP_FROM=your_smtp_from_email
 ZOOM_CLIENT_ID=your_zoom_client_id
 ZOOM_CLIENT_SECRET=your_zoom_client_secret
 ZOOM_REDIRECT_URI=your_zoom_redirect_uri
+```
 
 ### Run the Backend:
 
@@ -136,7 +162,30 @@ npm start
 - **WebRTC**: Enables real-time communication for video interviews.
 
 ## Screenshots
+ **Student and Admin**: Showcase a clean and intuitive interface for Login and Registration.
+   ![Student](/src/assets/colleage_screenshot%208.png)
+**Companys**:
+   ![Student](/src/assets/colleage_screenshot%207.png)
 
 1. **Student Dashboard**: Showcase a clean and intuitive interface for students.
+   ![Student](/src/assets/colleage_screenshot%2010.png)
+   ![Student](/src/assets/colleage_screenshot%201.png)
+   ![Student](/src/assets/colleage_screenshot%205.png)
+   ![Student](/src/assets/colleage_screenshot%2015.png)
+
 2. **Admin Dashboard**: Display admin tools for managing placements and generating reports.
+   ![Admin](/src/assets/colleage_screenshot%2012.png)
+   ![Admin](/src/assets/colleage_screenshot%203.png)
+   ![Admin](/src/assets/colleage_screenshot%2014.png)
+   ![Admin](/src/assets/colleage_screenshot%2016.png)
+   ![Admin](/src/assets/colleage_screenshot%2017.png)
+ ![Admin](/src/assets/colleage_screenshot%209.png)
+
+
 3. **Company Dashboard**: User-friendly tools for job postings and candidate management.
+ ![Company](/src/assets/colleage_screenshot%202.png)
+ ![Company](/src/assets/colleage_screenshot%206.png)
+ ![Company](/src/assets/colleage_screenshot%204.png)
+ ![Company](/src/assets/colleage_screenshot%2013.png)
+ ![Company](/src/assets/colleage_screenshot%2011.png)
+

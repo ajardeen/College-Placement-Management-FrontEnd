@@ -9,7 +9,7 @@ function CompanyList() {
     try {
       const fetchCompanies = async () => {
         const response = await API.get("/admin/get-all-companies");
-     
+        console.log(response.data);
         setCompanies(response.data);
       };
       fetchCompanies();

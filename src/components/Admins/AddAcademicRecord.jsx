@@ -47,7 +47,7 @@ const AddAcademicRecord = () => {
     try {
       await API.post("/admin/add-academic-records", formData)
       .then((response) => {
-     
+        console.log(response.data);
         alert("Academic Record added successfully!");
       })
       .catch((error) => {

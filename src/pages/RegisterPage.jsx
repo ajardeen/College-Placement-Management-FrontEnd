@@ -28,11 +28,11 @@ const RegisterPage = () => {
     }
 
     try {
-     
+      console.log(formData);
 
       await API.post("/register", formData)
         .then((response) => {
-          
+          console.log(response.data);
           if (response.status === 200) {
             toast.error("User already registed. Please try again.");
             console.log(response.data);

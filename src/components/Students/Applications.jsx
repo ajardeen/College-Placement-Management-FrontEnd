@@ -14,7 +14,7 @@ const Applications = () => {
       try {
         await API.get(`/student/get-student-applications/${userid}`)
           .then((response) => {
-            
+            console.log(response.data);
             setTimeout(() => {
               setApplications(response.data);
               setLoading(false);
@@ -95,8 +95,8 @@ const Applications = () => {
                   </div>
                 </td>
               </tr>
-            ) : filteredApplications ? (filteredApplications.map((app,index) => (
-              <tr key={index} className="border-t">
+            ) : filteredApplications ? (filteredApplications.map((app) => (
+              <tr key={app.id} className="border-t">
                 <td className="px-6 py-4 text-blue-600">{app.jobTitle}</td>
                 <td className="px-6 py-4">{app.companyName}</td>
                 <td

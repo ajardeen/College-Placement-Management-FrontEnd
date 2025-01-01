@@ -14,7 +14,7 @@ const AcademicRecords = () => {
   const fetchRecords = async () => {
     try {
       const response = await API.get('/admin/get-all-academic-records');
-     
+      console.log(response.data);
       
       setRecords(response.data.map(record => ({
         id: record._id,
@@ -43,7 +43,7 @@ const AcademicRecords = () => {
   
   const handleUpdate = async () => {
     try {
-     
+      console.log("Sending update request with data:", editedRecord);
       const response = await API.put('/admin/update-academic-records', {
         _id: editedRecord.id,
         studentRegistrationNumber: editedRecord.studentRegistrationNumber,
@@ -57,7 +57,7 @@ const AcademicRecords = () => {
         transcript: editedRecord.transcript
       });
       
-    
+      console.log("Update response:", response.data);
 
       
       setRecords(records.map(record => 

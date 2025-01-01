@@ -15,11 +15,11 @@ function CreatePlacementDrive() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-     
+      console.log(formData);
    
       await API.post("/admin/create-placement-drive", formData)
         .then((res) => {
-         
+          console.log(res.data);
           alert("Placement Drive created successfully");
         })
         .catch((err) => console.error(err));

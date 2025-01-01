@@ -10,10 +10,6 @@ import Navbar from "../Navbar";
 import PlacementDriveRegistration from "../PlacementDriveRegistration";
 import PlacementDriveList from "../PlacementDriveList";
 import ScheduleMeetingForm from "./ScheduleMeetingForm";
-import Zoom from '../Zoom'
-import ZoomCallBack from "../ZoomCallBack";
-import { useAuth } from "../../services/AuthProvider";
-import InterviewScheduled from "./InterviewScheduled";
 
 function CompanyDashboard() {
   const name = useMemo(() => {
@@ -38,26 +34,10 @@ function CompanyDashboard() {
               path="/interview-schedular/:studentId/:applicationId"
               element={<InterviewScheduler />}
             />
-            <Route
-              path="/PlacementDriveRegistration/:driveid"
-              element={<PlacementDriveRegistration />}
-            />
-            <Route
-              path="/PlacementDriveRegistration"
-              element={<PlacementDriveRegistration />}
-            />
-            <Route
-              path="/PlacementDriveList"
-              element={<PlacementDriveList />}
-            />
-            <Route
-              path="/ScheduleMeetingForm"
-              element={<ScheduleMeetingForm />}
-            />
-            <Route path="/zoom" element={<Zoom />} />
-
-            <Route path="/zoom/callback" element={<ZoomCallBack />} />
-            <Route path="/InterviewScheduled" element={<InterviewScheduled />} />
+            <Route path="/PlacementDriveRegistration/:driveid" element={<PlacementDriveRegistration />} />
+            <Route path="/PlacementDriveRegistration" element={<PlacementDriveRegistration />} />
+            <Route path="/PlacementDriveList" element={<PlacementDriveList />} />
+            <Route path="/ScheduleMeetingForm" element={<ScheduleMeetingForm/> }/>
           </Routes>
         </div>
       </div>

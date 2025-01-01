@@ -44,9 +44,9 @@ function PlacementDrivesDashboard() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {drives.map((drive,index) => (
+          {drives.map((drive) => (
             <div
-              key={index}
+              key={drive.id}
               className="bg-white overflow-hidden shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300"
             >
               <div className="p-6">

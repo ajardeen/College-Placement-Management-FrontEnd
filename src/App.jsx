@@ -11,7 +11,7 @@ import { Navigate } from "react-router-dom";
 
 function App() {
   const { role } = useAuth();
- 
+  console.log(role);
 
   return (
     <>

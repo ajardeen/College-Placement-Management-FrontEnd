@@ -19,7 +19,7 @@ function InterviewScheduler() {
    try {
       await API.post("/company/schedule-interview",{ applicationId, scheduledDate, format,feedback,link,companyid })
       .then((response) => {
-       
+        console.log(response.data)
         alert("Interview Scheduled!");
         setTimeout(() => {
           navigate(`/company/dashboard/job-application`);

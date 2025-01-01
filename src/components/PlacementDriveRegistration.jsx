@@ -20,7 +20,7 @@ function PlacementDriveRegistration() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-   
+    console.log("Registration Data:", {formData,role});
 
     try {
       await API.post(`${role==="Students"?"/student":"/company"}/register-for-drive`, {formData,role})

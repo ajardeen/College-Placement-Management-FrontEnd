@@ -35,7 +35,7 @@ const LoginPage = () => {
       await API.post("/login", formData)
         .then((res) => {
          
-         
+          console.log("Login response:", res.data);
           login(res.data.token, res.data.role);
           localStorage.setItem(
             "userData",

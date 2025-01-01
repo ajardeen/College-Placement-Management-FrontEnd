@@ -16,8 +16,6 @@ const StudentApplicationDetails = () => {
     const fetchApplications = async () => {
       try {
         const response = await API.post("/student/student-interview-status", { email });
-        console.log("Response:", response.data);
-        
         setApplications(response.data);
         setLoading(false);
       } catch (error) {
@@ -138,7 +136,7 @@ const StudentApplicationDetails = () => {
               {expandedId === app.applicationId ? "View Less" : "View More"}
             </button>
 
-            {expandedId === app.applicationId ? (
+            {expandedId === app.applicationId && (
               <motion.div
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
@@ -159,11 +157,6 @@ const StudentApplicationDetails = () => {
                         Date: {new Date(app.interviewDate).toLocaleString()}
                       </p>
                       <p className="text-gray-700">Format: {app.interviewFormat}</p>
-                      {app.interviewFormat === "Virtual" && (
-                        <p className="text-gray-700">
-                          Link: <a href={app.interviewLink} className="text-blue-500 underline">{app.interviewLink}</a>
-                        </p>
-                      )}
                       <p className="text-gray-700">Feedback: {app.interviewFeedback}</p>
                     </>
                   )}
@@ -174,8 +167,8 @@ const StudentApplicationDetails = () => {
                   <p className="text-gray-700">Email: {app.companyEmail}</p>
                   <p className="text-gray-700">Phone: {app.companyPhone}</p>
                 </div>
-            </motion.div>
-            ) : null}
+              </motion.div>
+            )}
           </motion.div>
         ))}
       </div>
