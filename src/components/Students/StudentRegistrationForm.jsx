@@ -47,7 +47,7 @@ const StudentRegistrationForm = () => {
     }
    
     try {
-      console.log("Form submitted successfully:", formData);
+     
       
       API.post("/student/student-form-register", formData)
       .then((response) => {

@@ -23,7 +23,7 @@ function JobApply() {
     const fetchJobDetails = async () => {
       API.post("/student/get-job-details", { jobId })
         .then((response) => {
-          console.log(response.data.jobData);
+       
           setJobDetails(response.data.jobData);
         })
         .catch((error) => {

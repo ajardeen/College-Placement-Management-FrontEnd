@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-// import API from "../../api/axios";
+import API from "../../api/axios";
 const ScheduleMeetingForm = () => {
   const [formData, setFormData] = useState({
     topic: "",
@@ -22,7 +22,7 @@ const ScheduleMeetingForm = () => {
     e.preventDefault();
     try {
       const token ="Q-rlrcRsRMe5z83o32KGmw";
-      await axios.post("http://localhost:3000/api/auth/company/schedule-meeting", formData,{
+      await API.post("/company/schedule-meeting", formData,{
         headers: {
           Authorization: `Bearer ${token}`,
         },
