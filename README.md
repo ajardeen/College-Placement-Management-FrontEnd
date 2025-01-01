@@ -4,6 +4,30 @@ A comprehensive system designed to streamline the college placement process. Thi
 
 ---
 
+## Demo Login Credentials
+
+### Admin
+
+USER: azardevacc@gmail.com  
+ PASS: 123
+
+### Company
+
+USER: microsoft@outlook.com 
+ PASS: 123
+
+### Student
+
+USER: 3rdmysteryunknown@gmail.com  
+ PASS: 123
+
+### Zoom API
+
+USER: <use your zoom marketplace email> 
+ PASS: <use your zoom marketplace password>
+
+login using this account and test payment
+
 ## Features
 
 ### 1. **Student and Application Management**
